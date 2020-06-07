@@ -1,0 +1,33 @@
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// large devices
+@mixin sm {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  @include sm {
+    flex-direction: column;
+  }
+}
+
+.content {
+  margin: 4rem 2.5rem;
+  @include lg {
+    max-width: 55em;
+    width: 100%;
+  }
+}

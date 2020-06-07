@@ -1,0 +1,84 @@
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// large devices
+@mixin sm {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-top: 1.45rem;
+  @include sm {
+    margin: 0 1rem;
+  }
+}
+
+.sidebar ul {
+  margin-left: 0;
+  text-align: center;
+}
+
+.sidebar li {
+  list-style: none;
+}
+
+.sidebar {
+  float:left;
+  @include lg {
+    margin-top: 4rem;
+    width: 25em;
+    display: inline-table;
+  }
+  @include sm {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.hamburger {
+  margin-right: 1rem;
+}
+
+.clickable {
+  @include sm {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.sidebar-item {
+  color: gray;
+}
+
+.sidebar-item-active {
+  color: black;
+  font-weight: bold;
+}
+
+.sidebar-item-active:hover {
+  color: black;
+}
+
+.nav {
+  @include sm {
+    display: none;
+  }
+}
+
+.nav.open {
+  @include sm {
+    display: block;
+  }
+}

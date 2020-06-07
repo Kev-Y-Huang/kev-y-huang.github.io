@@ -1,20 +1,29 @@
 import React from "react"
-import { Link } from "gatsby"
+import Typewriter from "typewriter-effect"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <SEO title="Home Page"/>
+    <h1>
+      <Typewriter
+        options={{
+          strings: ["Hi, my name is Kevin!"],
+          autoStart: true,
+          loop: true
+        }}
+      />
+    </h1>
+    <div className={"description"}>
+      I'm a <b>rising sophomore</b> at <b>Harvard University</b> planning to study <b>computer
+      science</b> and <b>math</b>.
+      Outside of class, I'm technical director of <a href={"http://hodp.org/"}>Harvard Open Data Project</a>,
+      a principle in <a href={"https://www.harvardcap.org/"}>Harvard Undergraduate Capital Partners</a>,
+      and a developer for <a href={"https://datamatch.me/"}>Datamatch</a>.
+      I'm passionate about coding, all things tech, and music.
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 

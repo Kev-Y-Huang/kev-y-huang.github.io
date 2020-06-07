@@ -1,0 +1,22 @@
+.link {
+  text-align: center;
+}
+
+.link a p {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.link a:hover p {
+  visibility: visible;
+  opacity: 1;
+}
+
+.link li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 1.5em;
+  width: 5em;
+  vertical-align: top;
+}
