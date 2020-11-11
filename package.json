@@ -6,6 +6,7 @@
   "author": "Kevin Huang <kevin_huang@college.harvard.edu>",
   "dependencies": {
     "@icons-pack/react-simple-icons": "^3.0.0",
+    "@material-ui/core": "^4.11.0",
     "dotenv": "latest",
     "gatsby": "^2.21.37",
     "gatsby-image": "^2.4.4",
@@ -44,7 +45,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public -b origin"
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "repository": {
     "type": "git",
