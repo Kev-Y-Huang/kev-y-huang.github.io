@@ -23,15 +23,16 @@ const IndexPage = () => (
       </div>
       <br/>
       <div>
-        Outside of class, I'm technical director of <a href={"http://hodp.org/"}>Harvard Open Data Project</a>,
-        a principal in <a href={"https://www.harvardcap.org/"}>Harvard Undergraduate Capital Partners</a>,
-        and a developer for <a href={"https://datamatch.me/"}>Datamatch</a>.
+        Outside of class, I'm Vice President of <a href={"http://hodp.org/"}>Harvard Open Data Project</a>,
+        Managing Director of Diligence in <a href={"https://www.harvardcap.org/"}>Harvard Undergraduate Capital Partners</a>,
+        and a developer on the algorithm team for <a href={"https://datamatch.me/"}>Datamatch</a>.
         I'm passionate about all things tech, music, and cycling.
       </div>
       <br/>
       <div>
-        Currently, I'm taking a <b>gap year</b> and will be working at <b>Shuttefly</b> as a <b>Software Developer Contractor</b>
-        while continuing to work with Harvard clubs/organizations and coding personal projects.
+        This past summer, I was a <b>Software Development Intern</b> at <a href={'https://www.gem.com/'}><b>Gem</b></a>.
+        There, I built Gem's first ML feature on their flagship recruiting product. Prior to that, I spent a year
+        at <b>Shutterfly</b> as a <b>Software Developer Contractor</b> on the Manufacturing Platform team.
       </div>
     </div>
   </Layout>
