@@ -8,7 +8,67 @@ import { Box } from "@material-ui/core"
 const CourseworkPage = () => {
   const courses = [
     {
-      name: "Fall 2021",
+      name: "Junior Fall 2022",
+      courses: [
+        {
+          course: "CS 184",
+          link: "https://shamulent.github.io/CS_Stat184_Fall22.html",
+          description: "Introduction to Reinforcement Learning",
+        },
+        {
+          course: "CS 279R",
+          link: "https://www.seas.harvard.edu/computer-science/courses",
+          description: "Research Topics in Human-Computer Interaction",
+        },
+        {
+          course: "CS 121",
+          link: "https://cs121.boazbarak.org/index.html",
+          description: "Introduction to Theoretical Computer Science",
+        },
+        {
+          course: "Gened 1104",
+          link:
+            "https://gened.fas.harvard.edu/classes/science-and-cooking-haute-cuisine-soft-matter-science",
+          description:
+            "Science and Cooking: From Haute Cuisine to Soft Matter Science",
+        },
+      ],
+    },
+    {
+      name: "Sophomore Spring 2022",
+      courses: [
+        {
+          course: "CS 96",
+          link: "https://www.seas.harvard.edu/computer-science/courses",
+          description:
+            "System Design Projects: Machine Learning for Social Impact",
+        },
+        {
+          course: "CS 179",
+          link: "https://glassmanlab.seas.harvard.edu/cs179.html",
+          description: "Design of Useful and Usable Interactive Systems",
+        },
+        {
+          course: "Stat 111",
+          link: "https://statistics.fas.harvard.edu/statistics-courses",
+          description: "Introduction to Statistical Inference",
+        },
+        {
+          course: "Gened 1110",
+          link:
+            "https://gened.fas.harvard.edu/classes/classical-mythology-myth-antiquity-and-today",
+          description: "Classical Mythology: Myth in Antiquity and Today",
+        },
+        {
+          course: "Chinese 123XB",
+          link:
+            "https://curiosity.lib.harvard.edu/archived-harvard-university-online-course-catalogs-courses/catalog/26-016b6137ac12e2a68f9510e7077a839e",
+          description: "Intermediate Modern Chinese for Advanced Beginners",
+        },
+      ],
+    },
+    {
+      name: "Sophomore Fall 2021",
       courses: [
         {
           course: "MIT 6.036",
@@ -23,7 +83,7 @@ const CourseworkPage = () => {
         {
           course: "Stat 110",
           link: "https://projects.iq.harvard.edu/stat110/home",
-          description: "Probability",
+          description: "Introduction to Probability",
         },
         {
           course: "Chinese BX",
@@ -33,7 +93,7 @@ const CourseworkPage = () => {
       ],
     },
     {
-      name: "Spring 2020",
+      name: "Freshman Spring 2020",
       courses: [
         {
           course: "Math 25b",
@@ -60,7 +120,7 @@ const CourseworkPage = () => {
       ],
     },
     {
-      name: "Fall 2019",
+      name: "Freshman Fall 2019",
       courses: [
         {
           course: "Math 25a",
