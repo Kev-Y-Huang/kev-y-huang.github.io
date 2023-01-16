@@ -8,6 +8,16 @@ import { Box } from "@material-ui/core"
 const CourseworkPage = () => {
   const courses = [
     {
+      name: "Junior Spring 2023",
+      courses: [
+        {
+          course: "TBD",
+          link: "https://theuselessweb.com/",
+          description: "TBD",
+        },
+      ],
+    },
+    {
       name: "Junior Fall 2022",
       courses: [
         {
