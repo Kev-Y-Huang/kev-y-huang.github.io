@@ -1,7 +1,6 @@
 module.exports = {
   title: `kev-y-huang.github.io`,
   description: "Kev-Y-Huang's Dev Blog",
-  language: `en`, // TODO: Remove language support later
   siteUrl: `https://kev-y-huang.github.io/`,
   ogImage: `/og-image.png`, // TODO: Update OG Image
   comments: {
