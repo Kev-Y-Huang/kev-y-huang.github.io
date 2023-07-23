@@ -1,6 +1,6 @@
-import { Link } from "gatsby";
-import React from "react";
-import "./style.scss";
+import { Link } from 'gatsby';
+import React from 'react';
+import './style.scss';
 
 function PostHeader({ post }) {
   return (
@@ -20,7 +20,7 @@ function PostHeader({ post }) {
       <div className="info">
         <div className="author">
           posted by <strong>{post.author}</strong>,
-        </div>{" "}
+        </div>{' '}
         {post.date}
       </div>
     </header>

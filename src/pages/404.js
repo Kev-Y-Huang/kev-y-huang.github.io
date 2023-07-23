@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../layout";
-import Seo from "../components/seo";
+import Layout from '../layout';
+import Seo from '../components/seo';
 
 function NotFoundPage() {
   return (

@@ -1,8 +1,8 @@
-import { Button } from "@mui/material";
-import { navigate } from "gatsby-link";
-import React, { useCallback } from "react";
-import PostCard from "../post-card";
-import "./style.scss";
+import { Button } from '@mui/material';
+import { navigate } from 'gatsby-link';
+import React, { useCallback } from 'react';
+import PostCard from '../post-card';
+import './style.scss';
 
 function PostCardColumn({ posts, showMoreButton, moreUrl }) {
   const onMoreButtonClick = useCallback(() => {

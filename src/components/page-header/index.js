@@ -1,8 +1,8 @@
-import { Link, StaticQuery, graphql } from "gatsby";
-import React from "react";
-import Post from "../../models/post";
-import PostSearch from "../post-search";
-import "./style.scss";
+import { Link, StaticQuery, graphql } from 'gatsby';
+import React from 'react';
+import Post from '../../models/post';
+import PostSearch from '../post-search';
+import './style.scss';
 
 function PageHeader({ siteTitle }) {
   return (
@@ -40,9 +40,7 @@ function PageHeader({ siteTitle }) {
                 posts
               </Link>
               <PostSearch
-                posts={data.allMarkdownRemark.edges.map(
-                  ({ node }) => new Post(node, true)
-                )}
+                posts={data.allMarkdownRemark.edges.map(({ node }) => new Post(node, true))}
               />
             </div>
           </div>

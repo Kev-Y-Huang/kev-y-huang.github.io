@@ -1,8 +1,8 @@
-import React from "react";
-import SectionHeader from "../section-header";
-import IconButtonBar from "../icon-button-bar";
-import Image from "../image";
-import "./style.scss";
+import React from 'react';
+import SectionHeader from '../section-header';
+import IconButtonBar from '../icon-button-bar';
+import Image from '../image';
+import './style.scss';
 
 function ProjectSection({ projects }) {
   if (!projects || projects.length < 2) return null;
@@ -15,10 +15,7 @@ function ProjectSection({ projects }) {
             <div className="head">
               {project.title}&nbsp;&nbsp;
               {project.links && (
-                <IconButtonBar
-                  links={project.links}
-                  style={{ color: "#a8a8a8", fontSize: 24 }}
-                />
+                <IconButtonBar links={project.links} style={{ color: '#a8a8a8', fontSize: 24 }} />
               )}
             </div>
             <div className="body">
@@ -36,7 +33,7 @@ function ProjectSection({ projects }) {
               <div className="description">{project.description}</div>
             </div>
           </div>
-        )
+        ),
       )}
     </div>
   );

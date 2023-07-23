@@ -1,7 +1,7 @@
-import React from "react";
-import SectionHeader from "../section-header";
-import IconButtonBar from "../icon-button-bar";
-import "./style.scss";
+import React from 'react';
+import SectionHeader from '../section-header';
+import IconButtonBar from '../icon-button-bar';
+import './style.scss';
 
 function TimeStampSection({ timestamps }) {
   if (!timestamps || timestamps.length < 2) return null;
@@ -18,7 +18,7 @@ function TimeStampSection({ timestamps }) {
                 {timestamp.links && <IconButtonBar links={timestamp.links} />}
               </div>
             </div>
-          )
+          ),
         )}
       </div>
     </div>
