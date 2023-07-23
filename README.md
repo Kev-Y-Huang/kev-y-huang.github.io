@@ -1,16 +1,34 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby's default starter
+  Zoomkoding Gatsby Blog
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+<p align="center">
+  <a href="https://github.com/zoomkoding/zoomkoding-gatsby-blog/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-0BSD-blue.svg" alt="Zoomkoding Gatsby Blog is released under the 0BSD license." />
+  </a>
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="contributions welcome" />
+</p>
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+**Demo Websites**: [**English**](https://zoomkoding.netlify.app) | [**Korean**](https://www.zoomkoding.com)
+
+## 👋 Introduction
+
+This is a blog theme created for developers who want to create a pretty, clean and search engine friendly development blog.🏅
+
+> PRs and issues are all welcome! 👍
+
+## ✨ Features
+
+- 😛 Biography using Memoji and rotating-text
+- 💅 Code Highlight
+- 🌘 Dark MOde
+- 🔍 Table of Contents
+- 💬 Comments(Utterances)
+- ⚙️ Easy to configure
+- 🛠 Enhanced SEO & `sitemap.xml`, `robots.txt`
+- 📈 Google Analytics
+- 🧢 Emoji
 
 ## 🚀 Quick start
 
@@ -19,8 +37,8 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     Use the Gatsby CLI to create a new site, specifying the default starter.
 
     ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    # create a new Gatsby site using the zoomkoding starter
+    gatsby new my-default-starter https://github.com/zoomkoding/zoomkoding-gatsby-blog
     ```
 
 1.  **Start developing.**
@@ -36,64 +54,176 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     Your site is now running at `http://localhost:8000`!
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+## ⚙️ Next Steps
 
-## 🧐 What's inside?
+You can customize your blog by modifying contents of `gatsby-meta-config.js`
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+### 1. default
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+Provide your blog's title, description, author, siteUrl, ogImage, social Information(`title` is used as the blog name in the upper left corner.)
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+```js
+module.exports = {
+    title: '', // zoomkoding.dev
+    description: '', // zoomkoding's dev log
+    author: '', // zoomkoding
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+    siteUrl: '', // https://zoomkoding-gatsby-blog.netlify.com
+    ogImage: '', // open graph image (image displayed when the link is shared)
+    social: {
+        github: '', // https://github.com/zoomKoding
+        linkedIn: '', // https://www.linkedin.com/in/jinhyeok-jeong-800871192
+        email: '', // zoomkoding@gmail.com
+    },
+    ...
+}
+```
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+### 2. bio
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+**bio(Biography** is a section introducing the blog author.  
+For `description`, you can introduce yourself by adding multiple phrases. If you want to **add your Memoji**, replace the video file named `src/assets/author.mp4`.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+```js
+module.exports = {
+    ...
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+    bio: {
+        language: 'en', // en, ko
+        name: '', // author name
+        description: [''], // phases to describe who you are
+    },
+    ...
+}
+```
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+### 3. comments
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+If you want to have comments for your blog postings, please provide your github repository which is connected to `utterances`.
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+> 🦄 If you want to know how to set up utterances for your repository, read [https://utteranc.es/](https://utteranc.es/)
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+```js
+module.exports = {
+    ...
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+    comments: {
+        utterances: {
+            repo: '' // zoomkoding/zoomkoding-gatsby-blog
+        },
+    },
+    ...
+}
+```
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+## 👤 About Page
 
-## 🎓 Learning Gatsby
+You can also generate **About Page** with `gatsby-meta-config.js`. In the file, you can find timestamps and projects under about. If you provide information in the correct format, your About Page will be generated.
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+### 1. timestamps
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+If you provide each timestamp information in an array as shown below, it will be displayed in the timestamps section according to the order you entered.
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+> If there is no such information in links, you can omit it.
 
-## 💫 Deploy
+```js
+module.exports = {
+    ...
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+    about: {
+        timestamps: [
+            {
+                date: '', // date
+                activity: '', // activity
+                links: { // you can omit
+                    post: '', // post link
+                    googlePlay: '', // googlePlay link
+                    appStore: '' // appStore link
+                    github: '' // github repostory link
+                },
+            }
+            ...
+        ],
+        ...
+    },
+    ...
+}
+```
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
+### 2. projects
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+Similarly, if you provide information for each project in an array, it will be displayed in the projects section in the order you entered.
+
+```js
+module.exports = {
+    ...
+
+    about: {
+        ...
+
+        projects: [
+            {
+                title: '', // project title,
+                description: '', // description
+                techStack: ['flutter', 'nodejs'], //  tech stack
+                thumbnailUrl: '', // thumbnail Url
+                links: { // you can omit
+                    post: '', // post link
+                    googlePlay: '', // googlePlay link
+                    appStore: '' // appStore link
+                    github: '' // github repostory link
+                },
+            },
+            ...
+        ],
+        ...
+    },
+    ...
+}
+```
+
+<br/>
+
+If you entered the contents without any problem, you can check that your own blog was born.🎉
+
+> Please re-run through `npm start` to check the changes in the running blog!
+
+## ✍️ How to write posts
+
+To write a blog post in earnest, create a directory under `/content` and write a posting using markdown in `index.md`.
+
+> The name of the folder is used to create the path.
+
+### ℹ️ Post's Metadata
+
+At the top of the index.md file, you need to provide emoji, title, date, author, tags, categories information as shown below.
+
+> Emoji will be shown at the top of the post, and the categories can be divided by spaces and multiple entries can be entered.
+
+```
+---
+emoji: 🧢
+title: Getting Started
+date: '2021-03-22 23:00:00'
+author: 줌코딩
+tags: tutorial
+categories: tutorial
+---
+```
+
+### 🖼 Image Path
+
+If you want to attach an image to a post, add an image file to the same directory and use it as follows.
+
+```
+![image](./[image.png])
+```
+
+### 🔍 Table of Contents
+
+If you want the table of contents to be displayed on the right side of the article, add the following contents to the bottom of the `index.md` file, and the table of contents will be created automatically.
+
+    ```toc
+    ```

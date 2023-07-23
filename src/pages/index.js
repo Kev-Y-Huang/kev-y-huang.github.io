@@ -1,38 +1,73 @@
-import React from "react"
-import Typewriter from "typewriter-effect"
+import React, { useCallback, useState } from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../layout';
+import Seo from '../components/seo';
+import Bio from '../components/bio';
+import Post from '../models/post';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { getUniqueCategories } from '../utils/helpers';
+import PostTabs from '../components/post-tabs';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home Page" />
-    <h1>
-      <Typewriter
-        options={{
-          strings: ["Hi, my name is Kevin!"],
-          autoStart: true,
-          loop: true,
-        }}
+function HomePage({ data }) {
+  const posts = data.allMarkdownRemark.edges.map(({ node }) => new Post(node));
+  const { author } = data.site.siteMetadata;
+  const categories = ['All', ...getUniqueCategories(posts)];
+  const featuredTabIndex = categories.findIndex((category) => category === 'featured');
+  const [tabIndex, setTabIndex] = useState(featuredTabIndex === -1 ? 0 : featuredTabIndex);
+  const onTabIndexChange = useCallback((e, value) => setTabIndex(value), []);
+
+  return (
+    <Layout>
+      <Seo title="Home" />
+      <Bio author={author} />
+      <PostTabs
+        posts={posts}
+        onChange={onTabIndexChange}
+        tabs={categories}
+        tabIndex={tabIndex}
+        showMoreButton
       />
-    </h1>
-    <div className={"description"}>
-      <div>
-        I'm a <b>junior</b> at <b>Harvard University</b> studying <b>computer science</b> with a secondary in <b>math</b>.
-      </div>
-      <br />
-      <div>
-        Outside of class, I am President of{" "} <a href={"http://hodp.org/"}>Harvard Open Data Project</a> and an Undergraduate NLP Researcher at Boston Children's Hospital. I'm passionate{" "}
-        about all things tech, music, and cycling.
-      </div>
-      <br />
-      <div>
-        This upcoming summer, I will be working at <b>Roblox</b> as a <b>Software Engineer Intern</b>. This past summer, I was a <b>Software Engineer Intern</b> at <b>Meta</b> where I worked on{" "}
-        optimizing the user-privacy infrastructure. Previously, I was a <b>Software Engineer Intern</b> at <a href={"https://www.gem.com/"}><b>Gem</b></a> where I built Gem's first ML feature on{" "}
-        their flagship recruiting product. Prior to that, I spent a year at <b>Shutterfly</b> as a <b>Software Developer Contractor</b> on the Manufacturing Platform team.
-      </div>
-    </div>
-  </Layout>
-)
+    </Layout>
+  );
+}
 
-export default IndexPage
+export default HomePage;
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 500, truncate: true)
+          frontmatter {
+            categories
+            title
+            date(formatString: "MMMM DD, YYYY")
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+
+    site {
+      siteMetadata {
+        author {
+          name
+          bio {
+            roles
+            thumbnail
+          }
+          social {
+            github
+            linkedIn
+            email
+            resume
+          }
+        }
+      }
+    }
+  }
+`;
