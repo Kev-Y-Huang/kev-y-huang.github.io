@@ -1,6 +1,6 @@
-import { Link } from 'gatsby';
-import React from 'react';
-import './style.scss';
+import { Link } from "gatsby";
+import React from "react";
+import "./style.scss";
 
 function PostNavigator({ prevPost, nextPost }) {
   return (
