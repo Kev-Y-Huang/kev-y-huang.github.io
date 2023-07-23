@@ -3,6 +3,7 @@ import React from 'react';
 import Post from '../../models/post';
 import PostSearch from '../post-search';
 import './style.scss';
+import Kevin_Huang_Resume from '../../../assets/Kevin_Huang_Resume.pdf';
 
 function PageHeader({ siteTitle }) {
   return (
@@ -39,6 +40,9 @@ function PageHeader({ siteTitle }) {
               <Link className="link" to="/posts">
                 posts
               </Link>
+              <a className="link" href={Kevin_Huang_Resume}>
+                resume
+              </a>
               <PostSearch
                 posts={data.allMarkdownRemark.edges.map(({ node }) => new Post(node, true))}
               />

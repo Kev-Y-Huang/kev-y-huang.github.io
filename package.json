@@ -1,9 +1,9 @@
 {
-  "name": "zoomkoding.com",
-  "private": false,
-  "description": "A neat blog theme for developers",
-  "version": "3.0.0",
-  "author": "zoomkoding <zoomkoding@gmail.com>",
+  "name": "kev-y-huang.github.io",
+  "private": true,
+  "description": "Personal blog",
+  "version": "1.0.0",
+  "author": "Kev-Y-Huang <kev.y.huang@gmail.com>",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -60,9 +60,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zoomkoding/zoomkoding-gatsby-blog"
+    "url": "https://github.com/Kev-Y-Huang/kev-y-huang.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/zoomkoding/zoomkoding-gatsby-blog/issues"
+    "url": "https://github.com/Kev-Y-Huang/kev-y-huang.github.io.git"
   }
 }
