@@ -6,6 +6,7 @@ import PlayIcon from '@mui/icons-material/PlayArrowOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AndroidIcon from '@mui/icons-material/Android';
 import AppleIcon from '@mui/icons-material/Apple';
+import ArticleIcon from '@mui/icons-material/Article';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import './style.scss';
@@ -24,6 +25,8 @@ function IconButtonBar({ links = {} }) {
         return <AndroidIcon {...props} />;
       case 'appStore':
         return <AppleIcon {...props} />;
+      case 'resume':
+        return <ArticleIcon {...props} />;
       case 'email':
         return <EmailIcon {...props} />;
       case 'linkedIn':

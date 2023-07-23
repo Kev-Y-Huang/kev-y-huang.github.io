@@ -19,12 +19,13 @@ module.exports = {
         'cycling fanatic',
         'rap aficionado',
       ],
-      thumbnail: 'sample.png', // TODO: Update thumbnail
+      thumbnail: 'Kevin.jpg',
     },
     social: {
       github: `https://github.com/Kev-Y-Huang`,
       linkedIn: `https://www.linkedin.com/in/Kev-Y-Huang/`,
       email: `kev.y.huang@gmail.com`,
+      resume: `Kevin_Huang_Resume.pdf`,
     },
   },
 
