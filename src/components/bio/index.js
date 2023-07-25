@@ -33,7 +33,11 @@ function Bio({ author }) {
         </div>
       </div>
       <div className="thumbnail-wrapper">
-        <Image style={{ width: 250, height: 250, borderRadius: "50%" }} src={bio.thumbnail} alt="thumbnail" />
+        <Image
+          style={{ width: 250, height: 250, borderRadius: '50%' }}
+          src={bio.thumbnail}
+          alt="thumbnail"
+        />
       </div>
     </div>
   );
