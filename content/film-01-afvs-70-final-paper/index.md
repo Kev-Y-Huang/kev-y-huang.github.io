@@ -1,5 +1,5 @@
 ---
-emoji:
+emoji: 🎥
 title: My AFVS 70 Final Paper
 date: '2023-07-24 00:00:00'
 author: Kevin Huang
